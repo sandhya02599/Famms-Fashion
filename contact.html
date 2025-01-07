@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+      body{
+        font-family: 'Montserrat', sans-serif;
+        color: #0c0c0c;
+    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 30px;
+}
+
+
+.logo img {
+    max-width: 110%;
+    height: auto;
+}
+
+
+.nav-links {
+    display: flex;
+    column-gap: 30px;
+    list-style-type: none;
+    margin-left: 30px; 
+
+}
+
+.nav-links li {
+    margin-right: 30px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px; 
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ce1515;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+}
+
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    color: rgb(0, 0, 0);
+    margin-left: 20px; 
+    margin-right: 40px;
+    font-size: 24px; 
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: #ce1515; 
+}
+
+
+.search-icon, .cart-icon {
+    font-size: 24px; 
+}
+
+.icons a:hover .fas {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+
+.Contact{
+    text-align: center;
+    background-color: #f7444e;
+    height: 150px;
+    padding: 50px;
+    color: white;
+
+
+}
+.R1 input{
+    font-size: 20px;
+    margin-top: 35px;
+    width: 90Vh;
+    height: 60px;
+    padding-top: -90px;
+    margin-left: 26%;
+}
+.R3 button{
+    border-color:rgb(12, 12, 12);
+    padding: 15px 50px;
+    background-color: rgb(14, 13, 13);
+    color: white;
+    margin-left: 42%;
+    display: flex;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 15px;
+}
+.R3 button:hover{
+    background-color: rgb(235, 17, 17);
+}
+.arrival {
+    background-color: #d4ced0;
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.im-sec {
+    
+    width: 50%;
+    height: 500px;
+    overflow: hidden;  
+}
+
+.img {
+    width:100%; 
+    height:80%;
+    margin-left: 100px;
+    
+}
+
+.content-sec {
+     
+    display: flex;
+    flex-direction: column;  
+    width: 50%;
+    height: 500px;
+    padding: 20px;
+     
+}
+
+.content-sec p {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+.content-sec h1{
+    margin-top: 40px;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.footer_section {
+        background-color: #002c3e;
+        color: white; 
+        padding: 20px 0;
+        text-align: center; 
+        font-family: 'Arial', sans-serif; 
+    }
+    
+    .footer_section .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer_section .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; 
+        text-align: center; 
+    }    
+    
+    .footer_section .footer-col {
+        margin-bottom: 20px;
+        flex: 1; 
+        min-width: 280px; 
+    }
+    
+    .footer_contact h4,
+    .footer_detail a.footer-logo {
+        font-size: 2rem; 
+        margin-bottom: 15px;
+        color: white; 
+        font-family: 'Georgia', serif;
+    }
+    
+    .footer_detail a.footer-logo {
+        display: inline-block;
+        margin-top: 15px; 
+    }
+    
+    .footer_contact .contact_link_box a,
+    .footer_detail p {
+        display: block;
+        color: #f8f9fa; 
+        margin: 8px 0; 
+        text-align: center; 
+        font-size: 1.1rem; 
+    }    
+    
+    .footer_social a {
+        margin: 0 5px;
+        color: #f8f9fa; 
+        font-size: 1.5rem; 
+        text-decoration: none;
+    }
+    
+    .footer-info p {
+        font-size: 1rem; 
+        color: #f8f9fa; 
+        text-align: center; 
+    } 
+    .footer_section .footer_social a:hover {
+        color: #f7444e;
+    }  
+    .footer_section .footer_contact .contact_link_box a:hover {
+        color: #f7444e;
+    } 
+    
+    .map_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .map {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #googleMap {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a class="navbar" href="index.html">
+                <img src="images/logo.png" width="250px">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Pages</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About</a>
+                    <a href="testimonial.html">Testimonial</a>
+                </div>
+            </li>
+            <li><a href="Product.html">Product</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="contact.html">Content</a></li>
+        </ul>
+        <div class="icons">
+            <a href="#" class="search-icon">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="#" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+    </nav>
+
+<!-- contact -->
+ <div class="Contact">
+    <h1>Contact</h1>
+ </div>
+
+
+    <div class="R1">
+        <div class="R3">
+           <input type="text" placeholder="Enter Your Full Name"><br>
+           <input type="text" placeholder=" Enter Your Mail Address"><br>
+           <input type="text" placeholder=" Enter Subject"><br>
+           <input type="text" placeholder="Enter Your message"><br>
+           <button>SUBMIT</button><br>
+        </div>
+    </div>
+
+    <div class="arrival">
+        <div class="im-sec">
+            <img src="images/arrival-bg.png" alt="img1" class="img">
+        </div>
+    
+        <div class="content-sec">
+            <h1>#New Arrivals</h1>
+            <p>
+                Vitae fugiat laboriosam officia perferendis provident aliquid <br>
+                voluptatibus dolorem, fugit ullam sit earum id eaque nisi hic? <br>
+                Tenetur commodi, nisi rem vel, ea eaque ab ipsa, autem<br> similique ex unde!
+            </p>
+            <button style="background-color: #f7444e;height: 50px; width:150px; font-size: 18px; color: white; border-color: #f7444e;">Shop Now</button>
+        </div>
+    
+    </div>
+
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-md-4 footer-col">
+                    <div class="footer_contact">
+                        <h4>Reach at..</h4>
+                        <div class="contact_link_box">
+                            <a href="">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>Location</span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>Call +01 1234567890</span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>demo@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Logo and Details Column -->
+                <div class="col-md-4 footer-col">
+                    <div class="footer_detail">
+                        <a href="index.html" class="footer-logo">Famms</a>
+                        <p>
+                            Necessary, making this the first true<br> generator on the Internet. It uses a<br> dictionary of over 200 Latin words,<br> combined with.
+                        </p>
+                        <div class="footer_social">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Map Column -->
+                <div class="col-md-4 footer-col">
+                    <div class="map_container">
+                        <div class="map">
+                            <div id="googleMap"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Footer Info -->
+            <div class="footer-info">
+                <div class="col-lg-7 mx-auto px-0">
+                    <p>
+                        &copy; <span id="displayYear"></span> All Rights Reserved By
+                        <a href="https://html.design/">Free Html Templates</a><br>
+                        Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

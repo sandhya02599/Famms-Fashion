@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body{
+    font-family: 'Montserrat', sans-serif;
+    color: #0c0c0c;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 30px;
+}
+
+
+.logo img {
+    max-width: 110%;
+    height: auto;
+}
+
+
+.nav-links {
+    display: flex;
+    column-gap: 30px;
+    list-style-type: none;
+    margin-left: 30px; 
+
+}
+
+.nav-links li {
+    margin-right: 30px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px; 
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ce1515;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+}
+
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    color: rgb(0, 0, 0);
+    margin-left: 20px; 
+    margin-right: 40px;
+    font-size: 24px; 
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: #ce1515; 
+}
+
+
+.search-icon, .cart-icon {
+    font-size: 24px; 
+}
+
+.icons a:hover .fas {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+
+.testimonial_section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.testimonial_section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.testimonial_section .heading_container {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.testimonial_section .heading_container h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+}
+
+.testimonial_section .testimonial_slider {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  position: relative;
+}
+
+.testimonial_section .testimonial_item {
+  flex: 0 0 80%;
+  max-width: 80%;
+  margin: 0 10px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.testimonial_section .testimonial_item p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.testimonial_section .testimonial_item h5 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.testimonial_section .testimonial_nav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.testimonial_section .testimonial_nav button {
+  font-size: 24px;
+  background-color: #f7444e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.testimonial_section .testimonial_nav button:hover {
+  background-color: #d33e3c;
+}
+
+.testimonial_section .testimonial_item:hover {
+  transform: scale(1.05);
+} 
+        .footer_section {
+        background-color: #002c3e;
+        color: white; 
+        padding: 20px 0;
+        text-align: center; 
+        font-family: 'Arial', sans-serif; 
+    }
+    
+    .footer_section .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer_section .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; 
+        text-align: center; 
+    }    
+    
+    .footer_section .footer-col {
+        margin-bottom: 20px;
+        flex: 1; 
+        min-width: 280px; 
+    }
+    
+    .footer_contact h4,
+    .footer_detail a.footer-logo {
+        font-size: 2rem; 
+        margin-bottom: 15px;
+        color: white; 
+        font-family: 'Georgia', serif;
+    }
+    
+    .footer_detail a.footer-logo {
+        display: inline-block;
+        margin-top: 15px; 
+    }
+    
+    .footer_contact .contact_link_box a,
+    .footer_detail p {
+        display: block;
+        color: #f8f9fa; 
+        margin: 8px 0; 
+        text-align: center; 
+        font-size: 1.1rem; 
+    }    
+    
+    .footer_social a {
+        margin: 0 5px;
+        color: #f8f9fa; 
+        font-size: 1.5rem; 
+        text-decoration: none;
+    }
+    
+    .footer-info p {
+        font-size: 1rem; 
+        color: #f8f9fa; 
+        text-align: center; 
+    } 
+    .footer_section .footer_social a:hover {
+        color: #f7444e;
+    }  
+    .footer_section .footer_contact .contact_link_box a:hover {
+        color: #f7444e;
+    } 
+    
+    .map_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .map {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #googleMap {
+        width: 100%;
+        height: 100%;
+    }
+    @keyframes colorChange {
+    0% {
+        color: #f7444e;
+    }
+    25% {
+        color: #0c0c0c;
+    }
+    50% {
+        color: #023047;
+    }
+    75% {
+        color: #e63946;
+    }
+    100% {
+        color: #f7444e;
+    }
+}
+
+.animated-text {
+    animation: colorChange 4s infinite; /* Adjust duration as needed */
+}
+
+.animated-background {
+    animation: colorChange 6s infinite;
+    transition: background-color 0.5s ease-in-out;
+}
+/* Add animation on hover */
+.feature {
+    background-color: #023047;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.feature:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon animation */
+.feature i {
+    font-size: 48px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.feature:hover i {
+    color: #39e65f;
+}
+
+/* Text animation */
+.feature h3, .feature p {
+    transition: color 0.3s ease;
+}
+
+.feature:hover h3, .feature:hover p {
+    color: #4ed619;
+}
+
+
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a class="navbar" href="index.html">
+                <img src="images/logo.png" width="250px">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Pages</a>
+                <div class="dropdown-content">
+                    <a href="about.html">About</a>
+                    <a href="testimonial.html">Testimonial</a>
+                </div>
+            </li>
+            <li><a href="Product.html">Product</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="contact.html">Content</a></li>
+        </ul>
+        <div class="icons">
+            <a href="#" class="search-icon">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="#" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+    </nav>
+
+<!-- Customer's Testimonial-->
+<section class="testimonial_section">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Customer's Testimonial </h2>
+      </div>
+      <div class="testimonial_slider">
+        <div class="testimonial_item">
+          <div class="testimonial_content">
+            <img src="images/businesswoman.webp">
+            <p>Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat. </p>
+            <h5>Anna Trevor</h5>
+          </div>
+        </div>
+        <div class="testimonial_item">
+            <img src="images/happy.webp">
+          <div class="testimonial_content">
+            <p>Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat. </p>
+            <h5>- Sarah Smith</h5>
+          </div>
+        </div>
+        <div class="testimonial_item">
+            <img src="images/portrait.webp">
+          <div class="testimonial_content">
+            <p>Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat. </p>
+            <h5>- Michael Johnson</h5>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial_nav">
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
+      </div>
+    </div>
+  </section>
+<footer class="footer_section">
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-md-4 footer-col">
+                <div class="footer_contact">
+                    <h4>Reach at..</h4>
+                    <div class="contact_link_box">
+                        <a href="">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>Location</span>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <span>Call +01 1234567890</span>
+                        </a>
+                        <a href="">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <span>demo@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logo and Details Column -->
+            <div class="col-md-4 footer-col">
+                <div class="footer_detail">
+                    <a href="index.html" class="footer-logo">Famms</a>
+                    <p>
+                        Necessary, making this the first true<br> generator on the Internet. It uses a<br> dictionary of over 200 Latin words,<br> combined with.
+                    </p>
+                    <div class="footer_social">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Column -->
+            <div class="col-md-4 footer-col">
+                <div class="map_container">
+                    <div class="map">
+                        <div id="googleMap"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Info -->
+        <div class="footer-info">
+            <div class="col-lg-7 mx-auto px-0">
+                <p>
+                    &copy; <span id="displayYear"></span> All Rights Reserved By
+                    <a href="https://html.design/">Free Html Templates</a><br>
+                    Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+     let currentIndex = 0;
+        const slides = document.querySelectorAll('.testimonial_item');
+        const totalSlides = slides.length;
+
+function moveSlide(direction) {
+  currentIndex += direction;
+  
+  if (currentIndex < 0) {
+    currentIndex = totalSlides - 1;
+  } else if (currentIndex >= totalSlides) {
+    currentIndex = 0;
+  }
+  
+  // Hide all slides
+  slides.forEach(slide => slide.style.display = 'none');
+  
+  // Show current slide
+  slides[currentIndex].style.display = 'block';
+}
+
+// Initialize the first slide to show
+document.addEventListener('DOMContentLoaded', () => {
+  slides.forEach(slide => slide.style.display = 'none');
+  slides[currentIndex].style.display = 'block';
+});
+</script>
+
+</body>
+</html>
